@@ -29,11 +29,6 @@ def welcome():
     return render_template('home.html', komodo = first_image, Wei = second_image, Fuchai = third_image ,Hutong = fourth_image, 
                            Yip = fifth_image ,Shima = sixth_image ,Chow = seventh_image, Tanuki = eighth_image, Javier = ninth_image)
 
-@app.route("/t")
-def test():
-
-    return render_template('example.html')
-
 if __name__ == '__main__':
 
     app.run(host="0.0.0.0")
