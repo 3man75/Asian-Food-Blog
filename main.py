@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import url_for
+from Restaurants import get_Restaurants
 
 
 app = Flask(__name__)
@@ -23,9 +24,10 @@ def welcome():
     sixth_image = url_for('static', filename='Shima.jpeg')
     seventh_image = url_for('static', filename='Chow.jpeg')
     eighth_image = url_for('static', filename='Tanuki.jpeg')
+    ninth_image = url_for('static', filename='Javier.JPG')
     
-    return render_template('home.html', komodo= first_image, Wei = second_image, Fuchai = third_image, Hutong = fourth_image
-                           , Yip = fifth_image, Shima = sixth_image, Chow = seventh_image, Tanuki = eighth_image)
+    return render_template('home.html', komodo = first_image, Wei = second_image, Fuchai = third_image ,Hutong = fourth_image, 
+                           Yip = fifth_image ,Shima = sixth_image ,Chow = seventh_image, Tanuki = eighth_image, Javier = ninth_image)
 
 @app.route("/t")
 def test():
